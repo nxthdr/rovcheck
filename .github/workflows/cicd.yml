@@ -11,7 +11,7 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - run: sudo apt install libpcap-dev libsasl2-dev libssl-dev
     - name: Build
       run: cargo build --verbose
@@ -33,7 +33,7 @@ jobs:
     needs: [ tests ]
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Prepare
         run: |
